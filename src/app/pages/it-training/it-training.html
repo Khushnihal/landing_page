@@ -1,0 +1,91 @@
+<div class="container py-5">
+  <!-- Internship Glass Row -->
+  <section class="glass-row mb-5">
+    <h2 class="section-title mb-5">Internships — Work With Us</h2>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="glass-item">
+          <i class="bi bi-hdd-stack glass-icon"></i>
+          <h3 class="glass-label">Full Stack</h3>
+          <p class="glass-desc">
+            Hands-on project building modern web and enterprise apps with real teams.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="glass-item">
+          <i class="bi bi-hdd-stack glass-icon"></i>
+          <h3 class="glass-label">Data Analytics</h3>
+          <p class="glass-desc">
+            Business insights, dashboards, and python/Excel/Snowflake tooling.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Training Glass Row -->
+  <section class="glass-row mb-5">
+    <h2 class="section-title mb-5">Trainings and Placements</h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="glass-item">
+          <i class="bi bi-code-slash glass-icon"></i>
+          <div class="glass-label">Full Stack</div>
+          <div class="glass-desc">
+            Complete web development curriculum including Angular, Node, and APIs.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="glass-item">
+          <i class="bi bi-bar-chart-line glass-icon"></i>
+          <div class="glass-label">Data Analytics</div>
+          <div class="glass-desc">Modules on Excel, Python, SQL, Tableau, and PowerBI.</div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="glass-item">
+          <i class="bi bi-kanban-fill glass-icon"></i>
+          <div class="glass-label">MERN Stack</div>
+          <div class="glass-desc">React, MongoDB, Express, Node.js, cloud deployments.</div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="glass-item">
+          <i class="bi bi-cloud-upload-fill glass-icon"></i>
+          <div class="glass-label">Azure</div>
+          <div class="glass-desc">Azure DevOps, cloud app building, and certifications.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-------Slider/Carousel------------------>
+
+  <div class="placements-section" style="background: var(--dark-bg)">
+    <div class="container">
+      <h2 class="section-title text-center mx-auto mb-5 text-white">Our Placements</h2>
+      <div class="modern-slider-wrapper">
+        <button class="slider-arrow arrow-left" (click)="prevSlide()">&lt;</button>
+        <div class="modern-slider">
+          <div
+            *ngFor="let testimonial of visibleTestimonials; let i = index"
+            class="slider-card"
+            [class.center]="i === 1"
+            [class.left]="i === 0"
+            [class.right]="i === 2"
+          >
+            <img [src]="testimonial.photo" alt="Testimonial" />
+          </div>
+        </div>
+        <button class="slider-arrow arrow-right" (click)="nextSlide()">&gt;</button>
+      </div>
+    </div>
+  </div>
+</div>

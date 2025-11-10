@@ -1,0 +1,223 @@
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" data-aos="fade-down">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <!-- Logo image replaces the text; adjust width/height or classes as needed -->
+      <img
+        src="/images/LOGO-Light.png"
+        alt="Right Ladder logo"
+        style="width: 250px; max-width: 76%"
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a [routerLink]="['/']" [fragment]="'home'" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/']" [fragment]="'services'" class="nav-link">Services</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/']" [fragment]="'products'" class="nav-link">Products</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['it-training']" class="nav-link">IT Trainings</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/our-team']" class="nav-link">Our Team</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/']" [fragment]="'contact'" class="nav-link">Contact</a>
+        </li>
+      </ul>
+
+      <div class="d-flex gap-2">
+        <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#loginModal">
+          Sign In
+        </button>
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#registerModal">
+          Sign Up
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Login Modal -->
+<div
+  class="modal fade"
+  id="loginModal"
+  tabindex="-1"
+  aria-labelledby="loginModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">
+          <i class="bi bi-box-arrow-in-right me-2"></i>Sign In to Right Ladder
+        </h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="loginEmail" class="form-label">Email Address</label>
+            <input
+              type="email"
+              class="bright-input"
+              id="loginEmail"
+              placeholder="your.email@company.com"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label">Password</label>
+            <input
+              type="password"
+              class="bright-input"
+              id="loginPassword"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="rememberMe" />
+            <label class="form-check-label text-muted" for="rememberMe"> Remember me </label>
+          </div>
+          <button type="submit" class="btn btn-success w-100 py-2">
+            Sign In <i class="bi bi-arrow-right ms-2"></i>
+          </button>
+        </form>
+        <div class="text-center mt-3">
+          <a href="#" class="text-muted" style="text-decoration: none">Forgot password?</a>
+        </div>
+        <hr class="my-4" style="border-color: var(--border-green)" />
+        <p class="text-center text-muted mb-0">
+          Don't have an account?
+          <a
+            href="#"
+            style="color: var(--primary-green); text-decoration: none; font-weight: 600"
+            data-bs-dismiss="modal"
+            data-bs-toggle="modal"
+            data-bs-target="#registerModal"
+          >
+            Sign Up
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Register Modal -->
+<div
+  class="modal fade"
+  id="registerModal"
+  tabindex="-1"
+  aria-labelledby="registerModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="registerModalLabel">
+          <i class="bi bi-person-plus me-2"></i>Create Your Account
+        </h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="registerName" class="form-label">Full Name</label>
+            <input
+              type="text"
+              class="bright-input"
+              id="registerName"
+              placeholder="John Doe"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="registerEmail" class="form-label">Email Address</label>
+            <input
+              type="email"
+              class="bright-input"
+              id="registerEmail"
+              placeholder="your.email@company.com"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="registerCompany" class="form-label">Company Name</label>
+            <input
+              type="text"
+              class="bright-input"
+              id="registerCompany"
+              placeholder="Your Company Ltd."
+            />
+          </div>
+          <div class="mb-3">
+            <label for="registerPassword" class="form-label">Password</label>
+            <input
+              type="password"
+              class="bright-input"
+              id="registerPassword"
+              placeholder="Create a strong password"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+            <input
+              type="password"
+              class="bright-input"
+              id="registerConfirmPassword"
+              placeholder="Re-enter your password"
+              required
+            />
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="agreeTerms" required />
+            <label class="form-check-label text-muted" for="agreeTerms">
+              I agree to the Terms of Service and Privacy Policy
+            </label>
+          </div>
+          <button type="submit" class="btn btn-success w-100 py-2">
+            Create Account <i class="bi bi-check-circle ms-2"></i>
+          </button>
+        </form>
+        <hr class="my-4" style="border-color: var(--border-green)" />
+        <p class="text-center text-muted mb-0">
+          Already have an account?
+          <a
+            href="#"
+            style="color: var(--primary-green); text-decoration: none; font-weight: 600"
+            data-bs-dismiss="modal"
+            data-bs-toggle="modal"
+            data-bs-target="#loginModal"
+          >
+            Sign In
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

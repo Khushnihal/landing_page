@@ -1,0 +1,47 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row align-items-start">
+      <!-- Left side: Logo & theory -->
+      <div class="col-lg-6 d-flex flex-column justify-content-start">
+        <div class="d-flex align-items-start">
+          <img
+            src="/images/LOGO-Light.png"
+            alt="Right Ladder logo"
+            style="width: 250px; max-width: 76%"
+            class="me-4"
+          />
+          <div>
+            <p class="mb-2 footer-text" style="margin-top: 0.7rem">
+              Empowering businesses with innovative IT solutions.<br />
+              Building tomorrow's technology, today.
+            </p>
+            <div class="d-flex gap-3 mt-2">
+              <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
+              <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Right side: Links & theory -->
+      <div class="col-lg-6 d-flex flex-column justify-content-between align-items-end">
+        <div class="mb-2">
+          <!-- <a href="#home" class="footer-link">Home</a>
+          <a href="#services" class="footer-link">Services</a>
+          <a href="#features" class="footer-link">Features</a>
+          <a href="#contact" class="footer-link">Contact</a> -->
+
+          <a [routerLink]="['/']" [fragment]="'home'" class="footer-link">Home</a>
+          <a [routerLink]="['/']" [fragment]="'services'" class="footer-link">Services</a>
+          <a [routerLink]="['/']" [fragment]="'products'" class="footer-link">Products</a>
+          <a [routerLink]="['/']" [fragment]="'features'" class="footer-link">Features</a>
+          <a [routerLink]="['/']" [fragment]="'contact'" class="footer-link">Contact</a>
+        </div>
+        <p class="mb-0 footer-text" style="margin-top: 1.2rem">
+          © {{ currentYear }} Right Ladder Technologies. Built with 💚 Angular + .NET Core
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

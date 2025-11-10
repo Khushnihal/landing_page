@@ -57,3 +57,16 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## These variables control the color theme globally
+
+— every green button, border, hover glow, and accent derives from here 👇
+
+:root {
+--primary-green: #7AFB03; /_ 🔹 Main brand green (buttons, links, highlights) _/
+--primary-green-dark: #00a96e; /_ 🔹 Darker shade for hover/focus states _/
+--dark-bg: #0a0a0a; /_ 🔹 Page background color _/
+--dark-surface: #1a1a1a; /_ 🔹 Card & section background surfaces _/
+--border-green: rgba(0, 208, 132, 0.3); /_ 🔹 Border subtle tint _/
+--glow-green: rgba(0, 208, 132, 0.15); /_ 🔹 Shadows, glow, highlights _/
+}

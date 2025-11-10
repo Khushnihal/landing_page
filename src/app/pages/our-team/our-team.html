@@ -1,0 +1,45 @@
+<div class="container py-5">
+  <div class="our-team-container">
+    <!-- Owner's Section -->
+    <section class="owner-section row g-4">
+      <div class="owner-left">
+        <img src="/images/Ishant.jpg" alt="Owner Photo" class="owner-photo" />
+        <div class="owner-name mt-3">Mr. Ishant Chaudhary</div>
+        <div class="owner-title">Operations Head</div>
+      </div>
+      <div class="owner-right">
+        <h2 class="owner-vision-title">Our Vision</h2>
+        <div class="owner-vision-text">
+          <p>
+            At Right Ladder, our aim is to ignite transformative careers and build future-ready
+            teams. Our mentorship, project experience, and inclusive culture elevate every team
+            member and client. As Director, I dedicate myself to nurturing talent and leadership for
+            end-to-end success.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Employees Slider -->
+    <section class="emp-slider-section">
+      <h2 class="section-title">Meet Our Team</h2>
+      <div class="emp-slider-wrapper">
+        <button class="emp-slider-arrow arrow-left" (click)="prevSlide()">&lt;</button>
+        <div class="emp-slider">
+          <div
+            *ngFor="let emp of visibleEmployees; let i = index"
+            class="emp-slider-card"
+            [class.center]="i === 1"
+            [class.left]="i === 0"
+            [class.right]="i === 2"
+          >
+            <img [src]="emp.photo" class="emp-photo" width="80" height="80" alt="Employee Photo" />
+            <div class="emp-name">{{ emp.name }}</div>
+            <div class="emp-position">{{ emp.position }}</div>
+          </div>
+        </div>
+        <button class="emp-slider-arrow arrow-right" (click)="nextSlide()">&gt;</button>
+      </div>
+    </section>
+  </div>
+</div>
