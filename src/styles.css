@@ -89,6 +89,7 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
+  padding-top: 70px;
 }
 
 .hero-section::before {
@@ -456,7 +457,7 @@ body {
   border: 2px solid #797171;
   border-radius: 10px;
   padding: 0.9rem 1rem;
-  color: #111;
+  color: #f0f0f0;
   font-size: 1rem;
   width: 100%;
   transition: all 0.3s ease;
@@ -465,16 +466,17 @@ body {
 
 /* Placeholder styling */
 .bright-input::placeholder {
-  color: #eae1e1;
+  /* color: #fff7f796; */
+  color: #a0a0a0;
 }
 
 /* Focused State – subtle green glow */
 .bright-input:focus {
   outline: none;
-  border-color: #10b981; /* Tailwind green tone */
-  box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
-  background: #f9fff9; /* Slight green tint */
-  color: #000;
+  border-color: #77ef17; /* Tailwind green tone */
+  box-shadow: 0 0 10px #77ef17;
+  color: #f0f0f0; /* Light text for contrast on dark background */
+  background-color: #282222; /* Ensure background remains dark */
 }
 
 /* Textarea Match */
@@ -485,20 +487,8 @@ textarea.bright-input {
 
 /* Optional hover effect */
 .bright-input:hover {
-  border-color: #34d399;
-  box-shadow: 0 0 12px rgba(52, 211, 153, 0.3);
-}
-
-/* For Submit Button */
-.bright-btn {
-  background: linear-gradient(135deg, #10b981, #34d399);
-  color: #fff;
-  border: none;
-  padding: 0.9rem 2rem;
-  border-radius: 25px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+  border-color: #7afb03;
+  box-shadow: 0 0 12px #77ef17;
 }
 
 .bright-btn:hover {
@@ -571,98 +561,10 @@ textarea.bright-input {
 @media (max-width: 900px) {
 }
 
-.modern-slider-wrapper {
-  position: relative;
-  margin: 3rem auto 0;
-  max-width: 1100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2.5rem 0 4rem 0;
-  background: none;
-}
-
-.modern-slider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 9.5rem; /* More spacing for bigger images */
-  width: 100%;
-  position: relative;
-}
-
-.slider-card {
-  background: rgba(80, 140, 80, 0.09);
-  border-radius: 28px;
-  box-shadow: 0 0 48px 0 #6cff9e18;
-  padding: 0;
-  z-index: 1;
-
-  margin: 0 0.15rem;
-  filter: blur(0.5px);
-  transition: all 0.54s cubic-bezier(0.12, 1.42, 0.85, 0.98);
-  pointer-events: none;
-  width: 160px;
-  height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slider-card img {
-  width: 100%;
-  height: 77%;
-  box-shadow: 0 0 38px #28e68233;
-  border: 3.5px solid #77ef17;
-  border-radius: 15px;
-}
-
-.slider-card.center {
-  background: rgba(20, 40, 20, 0.91);
-
-  filter: none;
-  z-index: 3;
-  transform: scale(1.24) translateY(-26px);
-  pointer-events: auto;
-  width: 235px;
-  height: 265px;
-}
-
-.slider-card.left,
-.slider-card.right {
-  opacity: 0.79;
-  filter: blur(0.18px) grayscale(0.12);
-  z-index: 2;
-  transform: scale(0.93) translateY(12px);
-  width: 160px;
-  height: 180px;
-}
-
-.slider-arrow {
-  background: #0f2413e9;
-  color: #7afb03;
-  font-size: 2.8rem;
-  border: none;
-  border-radius: 50%;
-  width: 54px;
-  height: 54px;
-  box-shadow: 0 4px 18px #13823650;
-  cursor: pointer;
-  opacity: 0.96;
-  margin: 0 28px;
-  transition: background 0.23s, box-shadow 0.23s, color 0.23s, transform 0.23s;
-  position: relative;
-}
-
-.slider-arrow:hover {
-  background: #7afb03ee;
-  color: #121;
-}
-
 /* --------Our Team---------------------*/
 /* Owner's section style */
 .owner-section {
-  background: rgba(255, 255, 255, 0.11);
+  background: rgba(12, 6, 6, 0.136);
   border-radius: 28px;
   box-shadow: 0 0 15px #28fd779e;
   padding: 2.5rem;
@@ -676,10 +578,9 @@ textarea.bright-input {
   flex: 1 1 450px;
 }
 .owner-photo {
-  width: 230px;
-  height: 270px;
   object-fit: cover;
   border: 3px solid black;
+  border-radius: 18px;
   box-shadow: 0 0 20px #7afb03;
 }
 .owner-name {
@@ -708,6 +609,7 @@ textarea.bright-input {
   color: #fff;
   margin-bottom: 2rem;
   line-height: 1.8;
+  text-align: justify;
 }
 
 /* Employee slider styles */
@@ -741,7 +643,7 @@ textarea.bright-input {
   box-shadow: 0 6px 28px 0 #0f3f0f99;
   padding: 2rem 2rem 1.5rem 2rem;
   width: 280px; /* Fixed width */
-  height: 220px; /* Fixed height */
+  height: 240px; /* Fixed height */
   opacity: 0.8;
   z-index: 1;
   transition: all 0.34s cubic-bezier(0.12, 1.42, 0.85, 0.98);
@@ -787,9 +689,19 @@ textarea.bright-input {
   border-radius: 15%;
   margin-bottom: 1rem;
   display: block;
-  width: 90px;
-  height: 90px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
+}
+
+.testimonials-photo {
+  border: 2px solid #3ecf85;
+  border-radius: 0%;
+  margin-bottom: 1rem;
+  display: block;
+  object-fit: cover;
+  width: 280px;
+  height: 241px;
 }
 
 /* Text styling */

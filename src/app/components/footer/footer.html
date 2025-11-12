@@ -16,10 +16,30 @@
               Building tomorrow's technology, today.
             </p>
             <div class="d-flex gap-3 mt-2">
-              <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
-              <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
-              <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+              <a
+                href="https://www.instagram.com/rightladder_technologies/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon"
+              >
+                <i class="bi bi-instagram"></i>
+              </a>
+
+              <!-- <a href="#" class="social-icon"><i class="bi bi-github"></i></a> -->
+              <a
+                href="https://www.linkedin.com/company/rightladder-technologies/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/share/16hDeH3V4U/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon"
+                ><i class="bi bi-facebook"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -29,14 +49,13 @@
         <div class="mb-2">
           <!-- <a href="#home" class="footer-link">Home</a>
           <a href="#services" class="footer-link">Services</a>
-          <a href="#features" class="footer-link">Features</a>
+          <a href="#products" class="footer-link">Products</a>
           <a href="#contact" class="footer-link">Contact</a> -->
 
-          <a [routerLink]="['/']" [fragment]="'home'" class="footer-link">Home</a>
-          <a [routerLink]="['/']" [fragment]="'services'" class="footer-link">Services</a>
-          <a [routerLink]="['/']" [fragment]="'products'" class="footer-link">Products</a>
-          <a [routerLink]="['/']" [fragment]="'features'" class="footer-link">Features</a>
-          <a [routerLink]="['/']" [fragment]="'contact'" class="footer-link">Contact</a>
+          <a [routerLink]="['/']" fragment="home" class="footer-link">Home</a>
+          <a [routerLink]="['/']" fragment="services" class="footer-link">Services</a>
+          <a [routerLink]="['/']" fragment="products" class="footer-link">Products</a>
+          <a [routerLink]="['/']" fragment="contact" class="footer-link">Contact</a>
         </div>
         <p class="mb-0 footer-text" style="margin-top: 1.2rem">
           © {{ currentYear }} Right Ladder Technologies. Built with 💚 Angular + .NET Core

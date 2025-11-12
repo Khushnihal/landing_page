@@ -9,6 +9,9 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./our-team.css'],
 })
 export class OurTeam implements OnInit {
+  ngOnInit(): void {
+    window.scrollTo(0, 0);
+  }
   employees = [
     {
       name: 'Akash Wankhade',
@@ -22,11 +25,6 @@ export class OurTeam implements OnInit {
     },
 
     {
-      name: 'Tejas Telange',
-      position: 'Sales Executive',
-      photo: '/images/Tejas.jpg',
-    },
-    {
       name: 'Divya',
       position: 'HR Executive',
       photo: '/images/Divya.jpg',
@@ -35,6 +33,11 @@ export class OurTeam implements OnInit {
       name: 'Gaurav Khanorkar',
       position: 'Admin/HR',
       photo: '/images/Gaorav.jpg',
+    },
+    {
+      name: 'Tejas Telange',
+      position: 'Sales Executive',
+      photo: '/images/Tejas.jpg',
     },
   ];
 
@@ -54,5 +57,4 @@ export class OurTeam implements OnInit {
   }
 
   constructor() {}
-  ngOnInit(): void {}
 }

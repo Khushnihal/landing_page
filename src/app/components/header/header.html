@@ -19,22 +19,23 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item">
-          <a [routerLink]="['/']" [fragment]="'home'" class="nav-link">Home</a>
+          <a [routerLink]="['/']" fragment="home" class="nav-link">Home</a>
         </li>
         <li class="nav-item">
-          <a [routerLink]="['/']" [fragment]="'services'" class="nav-link">Services</a>
+          <!-- <a [routerLink]="['/']" [fragment]="'services'" class="nav-link">Services</a> -->
+          <a [routerLink]="['/']" fragment="services" class="nav-link">Services</a>
         </li>
         <li class="nav-item">
-          <a [routerLink]="['/']" [fragment]="'products'" class="nav-link">Products</a>
+          <a [routerLink]="['/']" fragment="products" class="nav-link">Products</a>
         </li>
         <li class="nav-item">
           <a [routerLink]="['it-training']" class="nav-link">IT Trainings</a>
         </li>
         <li class="nav-item">
-          <a [routerLink]="['/our-team']" class="nav-link">Our Team</a>
+          <a [routerLink]="['our-team']" class="nav-link">Our Team</a>
         </li>
         <li class="nav-item">
-          <a [routerLink]="['/']" [fragment]="'contact'" class="nav-link">Contact</a>
+          <a [routerLink]="['/']" fragment="contact" class="nav-link">Contact</a>
         </li>
       </ul>
 
@@ -95,17 +96,17 @@
           </div>
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="rememberMe" />
-            <label class="form-check-label text-muted" for="rememberMe"> Remember me </label>
+            <label class="form-label" for="rememberMe"> Remember me </label>
           </div>
           <button type="submit" class="btn btn-success w-100 py-2">
             Sign In <i class="bi bi-arrow-right ms-2"></i>
           </button>
         </form>
         <div class="text-center mt-3">
-          <a href="#" class="text-muted" style="text-decoration: none">Forgot password?</a>
+          <a href="#" style="text-decoration: none">Forgot password?</a>
         </div>
         <hr class="my-4" style="border-color: var(--border-green)" />
-        <p class="text-center text-muted mb-0">
+        <p class="text-center form-label mb-0">
           Don't have an account?
           <a
             href="#"
@@ -151,7 +152,7 @@
               type="text"
               class="bright-input"
               id="registerName"
-              placeholder="John Doe"
+              placeholder="Your Name"
               required
             />
           </div>
@@ -196,7 +197,7 @@
           </div>
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="agreeTerms" required />
-            <label class="form-check-label text-muted" for="agreeTerms">
+            <label class="form-label" for="agreeTerms">
               I agree to the Terms of Service and Privacy Policy
             </label>
           </div>
@@ -205,7 +206,7 @@
           </button>
         </form>
         <hr class="my-4" style="border-color: var(--border-green)" />
-        <p class="text-center text-muted mb-0">
+        <p class="text-center form-label mb-0">
           Already have an account?
           <a
             href="#"

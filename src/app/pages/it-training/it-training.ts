@@ -9,6 +9,9 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./it-training.css'],
 })
 export class ItTraining implements OnInit {
+  ngOnInit(): void {
+    window.scrollTo(0, 0);
+  }
   testimonials = [
     {
       photo: '/images/Khushnihal_T.jpg',
@@ -49,6 +52,4 @@ export class ItTraining implements OnInit {
   }
 
   constructor() {}
-
-  ngOnInit(): void {}
 }
