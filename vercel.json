@@ -4,9 +4,7 @@
     {
       "src": "package.json",
       "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist/Landing_Page_B"
-      }
+      "config": { "distDir": "dist/Landing_Page_B" }
     }
   ],
   "routes": [{ "src": "/(.*)", "dest": "/index.html" }]
