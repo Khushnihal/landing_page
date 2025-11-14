@@ -360,62 +360,6 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .hero-stats {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .cta-title {
-    font-size: 2rem;
-  }
-
-  /* Adjust employee slider cards for smaller screens */
-  .emp-slider-card {
-    width: 90vw !important;
-    height: auto !important;
-    margin: 1rem auto !important;
-  }
-
-  .emp-photo {
-    width: 80px !important;
-    height: 80px !important;
-  }
-
-  .testimonials-photo {
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  .emp-slider-wrapper {
-    padding: 1rem !important;
-  }
-
-  /* Font adjustments */
-  .section-title,
-  .owner-name {
-    font-size: 1.5rem;
-  }
-
-  .emp-name {
-    font-size: 1rem;
-  }
-
-  .glass-row {
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .owner-section {
-    padding: 1.5rem;
-  }
-}
-
 /* Contact  */
 .contact-card {
   background: var(--dark-surface);
@@ -781,4 +725,116 @@ textarea.bright-input {
 .emp-slider-arrow:hover {
   background: #7afb03ee;
   color: #121;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 991px) {
+  /* Navbar stays expanded, wrap nav links horizontally without dropdown */
+  .navbar-collapse {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .navbar-nav {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    width: 100%;
+    justify-content: center;
+  }
+  .nav-link {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hero section font resizing */
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-stats {
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+  }
+  /* CTA title resizing */
+  .cta-title {
+    font-size: 2rem;
+  }
+
+  /* Employee Slider Cards and Images - make flexible */
+  .emp-slider-card {
+    width: 90vw !important;
+    height: auto !important;
+    margin: 1rem auto !important;
+  }
+  .emp-photo {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .testimonials-photo {
+    width: 95% !important;
+    height: auto !important;
+  }
+  .emp-slider-wrapper {
+    padding: 1rem !important;
+  }
+
+  /* Owner section responsivity */
+  .owner-photo {
+    width: 150px !important;
+    height: auto !important;
+    margin: 0 auto 1rem auto;
+    display: block;
+  }
+  .owner-left,
+  .owner-right {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  /* Font adjustments in smaller viewports */
+  .section-title,
+  .owner-name {
+    font-size: 1.5rem;
+  }
+  .emp-name {
+    font-size: 1rem;
+  }
+  .glass-row {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .owner-section {
+    padding: 1.5rem;
+  }
+
+  /* Footer mobile adjustments */
+  .footer {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  .footer-text {
+    font-size: 0.9rem;
+  }
+  .footer-link {
+    display: inline-block;
+    margin: 0 0.5rem 0.5rem 0.5rem;
+  }
+  .d-flex.align-items-start {
+    flex-direction: column;
+    align-items: center;
+  }
+  .me-4 {
+    margin-right: 0 !important;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Use Bootstrap's img-fluid behavior for images */
+.emp-photo.img-fluid,
+.testimonials-photo.img-fluid,
+.owner-photo.img-fluid {
+  max-width: 100%;
+  height: auto;
 }

@@ -1,28 +1,16 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top" data-aos="fade-down">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <!-- Logo image replaces the text; adjust width/height or classes as needed -->
       <img
         src="/images/LOGO-Light.png"
         alt="Right Ladder logo"
         style="width: 250px; max-width: 76%"
       />
     </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="navbar-collapse">
       <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a [routerLink]="['/']" fragment="home" class="nav-link">Home</a></li>
         <li class="nav-item">
-          <a [routerLink]="['/']" fragment="home" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item">
-          <!-- <a [routerLink]="['/']" [fragment]="'services'" class="nav-link">Services</a> -->
           <a [routerLink]="['/']" fragment="services" class="nav-link">Services</a>
         </li>
         <li class="nav-item">
@@ -31,14 +19,11 @@
         <li class="nav-item">
           <a [routerLink]="['it-training']" class="nav-link">IT Trainings</a>
         </li>
-        <li class="nav-item">
-          <a [routerLink]="['our-team']" class="nav-link">Our Team</a>
-        </li>
+        <li class="nav-item"><a [routerLink]="['our-team']" class="nav-link">Our Team</a></li>
         <li class="nav-item">
           <a [routerLink]="['/']" fragment="contact" class="nav-link">Contact</a>
         </li>
       </ul>
-
       <div class="d-flex gap-2">
         <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#loginModal">
           Sign In

@@ -2,9 +2,8 @@
   <!-- Internship Glass Row -->
   <section class="glass-row mb-5">
     <h2 class="section-title mb-5">Internships — Work With Us</h2>
-
     <div class="row g-4">
-      <div class="col-md-6 col-lg-6">
+      <div class="col-12 col-md-6">
         <div class="glass-item">
           <i class="bi bi-hdd-stack glass-icon"></i>
           <h3 class="glass-label">Full Stack</h3>
@@ -14,8 +13,7 @@
           </p>
         </div>
       </div>
-
-      <div class="col-md-6 col-lg-6">
+      <div class="col-12 col-md-6">
         <div class="glass-item">
           <i class="bi bi-hdd-stack glass-icon"></i>
           <h3 class="glass-label">Data Analytics</h3>
@@ -28,11 +26,11 @@
     </div>
   </section>
 
-  <!-- Training Glass Row -->
+  <!-- Trainings and Placements Glass Row -->
   <section class="glass-row mb-5">
     <h2 class="section-title mb-5">Trainings and Placements</h2>
     <div class="row g-4">
-      <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
         <div class="glass-item">
           <i class="bi bi-code-slash glass-icon"></i>
           <div class="glass-label">Full Stack</div>
@@ -78,7 +76,7 @@
     </div>
   </section>
 
-  <!-- Teastimonials Slider -->
+  <!-- Placements Slider -->
   <section class="emp-slider-section">
     <h2 class="section-title text-center mx-auto mb-5 text-white">Our Placements</h2>
     <div class="emp-slider-wrapper">
@@ -91,7 +89,11 @@
           [class.left]="i === 0"
           [class.right]="i === 2"
         >
-          <img [src]="testimonial.photo" class="testimonials-photo" alt="Testimonials" />
+          <img
+            [src]="testimonial.photo"
+            alt="Testimonial Photo"
+            class="img-fluid testimonials-photo"
+          />
         </div>
       </div>
       <button class="emp-slider-arrow arrow-right" (click)="nextSlide()">&gt;</button>

@@ -2,18 +2,12 @@
   <div class="our-team-container">
     <!-- Owner's Section -->
     <section class="owner-section row g-4">
-      <div class="owner-left">
-        <img
-          src="/images/Ishant.jpg"
-          alt="Owner Photo"
-          class="img-fluid owner-photo"
-          width="230"
-          height="270"
-        />
+      <div class="owner-left col-12 col-md-4 d-flex flex-column align-items-center">
+        <img src="/images/Ishant.jpg" alt="Owner Photo" class="img-fluid owner-photo" />
         <div class="owner-name mt-3">Mr. Ishant Chaudhary</div>
         <div class="owner-title">Operations Head</div>
       </div>
-      <div class="owner-right">
+      <div class="owner-right col-12 col-md-8">
         <h2 class="owner-vision-title">Our Vision</h2>
         <div class="owner-vision-text">
           <p>
@@ -50,13 +44,7 @@
             [class.left]="i === 0"
             [class.right]="i === 2"
           >
-            <img
-              [src]="emp.photo"
-              class="img-fluid emp-photo"
-              width="80"
-              height="80"
-              alt="Employee Photo"
-            />
+            <img [src]="emp.photo" alt="Employee Photo" class="img-fluid emp-photo" />
             <div class="emp-name">{{ emp.name }}</div>
             <div class="emp-position">{{ emp.position }}</div>
           </div>
