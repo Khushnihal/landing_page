@@ -371,12 +371,48 @@ body {
     gap: 2rem;
   }
 
-  /* .section-title {
-    font-size: 2rem;
-  } */
-
   .cta-title {
     font-size: 2rem;
+  }
+
+  /* Adjust employee slider cards for smaller screens */
+  .emp-slider-card {
+    width: 90vw !important;
+    height: auto !important;
+    margin: 1rem auto !important;
+  }
+
+  .emp-photo {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  .testimonials-photo {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .emp-slider-wrapper {
+    padding: 1rem !important;
+  }
+
+  /* Font adjustments */
+  .section-title,
+  .owner-name {
+    font-size: 1.5rem;
+  }
+
+  .emp-name {
+    font-size: 1rem;
+  }
+
+  .glass-row {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .owner-section {
+    padding: 1.5rem;
   }
 }
 
@@ -450,8 +486,7 @@ body {
   margin-top: 0.5rem; /* reduce gap above button */
 }
 
-/* -----------------------------------------------*/
-/* 🌤️ Bright Input Fields */
+/* Bright Input Fields */
 .bright-input {
   background: #282222;
   border: 2px solid #797171;
@@ -466,7 +501,6 @@ body {
 
 /* Placeholder styling */
 .bright-input::placeholder {
-  /* color: #fff7f796; */
   color: #a0a0a0;
 }
 
@@ -475,8 +509,8 @@ body {
   outline: none;
   border-color: #77ef17; /* Tailwind green tone */
   box-shadow: 0 0 10px #77ef17;
-  color: #f0f0f0; /* Light text for contrast on dark background */
-  background-color: #282222; /* Ensure background remains dark */
+  color: #f0f0f0;
+  background-color: #282222;
 }
 
 /* Textarea Match */
@@ -497,8 +531,7 @@ textarea.bright-input {
   box-shadow: 0 0 25px rgba(16, 185, 129, 0.6);
 }
 
-/* -----------------------------------------------*/
-
+/* Section Glass Title */
 .section-glass-title {
   font-size: 2.2rem;
   font-weight: 900;
@@ -558,11 +591,8 @@ textarea.bright-input {
   font-weight: 500;
   letter-spacing: 0.02em;
 }
-@media (max-width: 900px) {
-}
 
-/* --------Our Team---------------------*/
-/* Owner's section style */
+/* Owners Section */
 .owner-section {
   background: rgba(12, 6, 6, 0.136);
   border-radius: 28px;
@@ -617,19 +647,19 @@ textarea.bright-input {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem; /* Increased gap for better spacing */
+  gap: 2rem;
   max-width: 980px;
   margin: auto;
   position: relative;
-  padding: 1rem 0; /* Padding for vertical breathing room */
-  background-color: #121818; /* Dark theme background */
+  padding: 1rem 0;
+  background-color: #121818;
   border-radius: 15px;
   box-shadow: 0 0 12px #0b2a13cc;
 }
 
 .emp-slider {
   display: flex;
-  gap: 2rem; /* More spacing between cards */
+  gap: 2rem;
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -642,8 +672,8 @@ textarea.bright-input {
   border-radius: 20px;
   box-shadow: 0 6px 28px 0 #0f3f0f99;
   padding: 2rem 2rem 1.5rem 2rem;
-  width: 280px; /* Fixed width */
-  height: 240px; /* Fixed height */
+  width: 280px;
+  height: 240px;
   opacity: 0.8;
   z-index: 1;
   transition: all 0.34s cubic-bezier(0.12, 1.42, 0.85, 0.98);
@@ -653,23 +683,23 @@ textarea.bright-input {
   filter: none;
   transform: scale(0.9);
   pointer-events: none;
-  box-sizing: border-box; /* Include padding and border in width/height */
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Prevent content overflow */
+  overflow: hidden;
 }
 
 /* Center card emphasized */
 .emp-slider-card.center {
-  background: #184b19e6; /* Stronger dark green background */
-  color: #a9ff83; /* Brighter text color for emphasis */
+  background: #184b19e6;
+  color: #a9ff83;
   opacity: 1;
   border: 2.5px solid #7afb03;
   z-index: 5;
   transform: scale(1) translateY(-15px);
-  pointer-events: auto; /* Enable interaction */
+  pointer-events: auto;
   filter: drop-shadow(0 4px 8px #7afb03aa);
   margin-top: auto;
   margin-bottom: auto;
@@ -752,5 +782,3 @@ textarea.bright-input {
   background: #7afb03ee;
   color: #121;
 }
-
-/* -----------------------------------------------*/

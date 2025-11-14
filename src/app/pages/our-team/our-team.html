@@ -6,7 +6,7 @@
         <img
           src="/images/Ishant.jpg"
           alt="Owner Photo"
-          class="owner-photo"
+          class="img-fluid owner-photo"
           width="230"
           height="270"
         />
@@ -50,7 +50,13 @@
             [class.left]="i === 0"
             [class.right]="i === 2"
           >
-            <img [src]="emp.photo" class="emp-photo" width="80" height="80" alt="Employee Photo" />
+            <img
+              [src]="emp.photo"
+              class="img-fluid emp-photo"
+              width="80"
+              height="80"
+              alt="Employee Photo"
+            />
             <div class="emp-name">{{ emp.name }}</div>
             <div class="emp-position">{{ emp.position }}</div>
           </div>
