@@ -668,7 +668,7 @@ textarea.bright-input {
   object-fit: cover;
 }
 
-.testimonials-photo {
+/* .testimonials-photo {
   border: 2px solid #3ecf85;
   border-radius: 0%;
   margin-bottom: 1rem;
@@ -676,6 +676,16 @@ textarea.bright-input {
   object-fit: cover;
   width: 280px;
   height: 241px;
+} */
+
+.emp-slider-card img,
+.testimonials-photo {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
 }
 
 /* Text styling */
@@ -728,8 +738,9 @@ textarea.bright-input {
 }
 
 /* Responsive Enhancements */
-@media (max-width: 991px) {
-  /* Navbar stays expanded, wrap nav links horizontally without dropdown */
+/* Navbar stays expanded, wrap nav links horizontally without dropdown */
+/* @media (max-width: 991px) {
+ 
   .navbar-collapse {
     display: flex !important;
     flex-wrap: wrap;
@@ -745,7 +756,7 @@ textarea.bright-input {
   .nav-link {
     white-space: nowrap;
   }
-}
+} */
 
 @media (max-width: 768px) {
   /* Hero section font resizing */

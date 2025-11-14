@@ -7,7 +7,21 @@
         style="width: 250px; max-width: 76%"
       />
     </a>
-    <div class="navbar-collapse">
+    <!-- Toggler button for collapsing navbar on mobile -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible navbar content -->
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item"><a [routerLink]="['/']" fragment="home" class="nav-link">Home</a></li>
         <li class="nav-item">
