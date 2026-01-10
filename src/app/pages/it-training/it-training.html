@@ -89,11 +89,7 @@
           [class.left]="i === 0"
           [class.right]="i === 2"
         >
-          <img
-            [src]="testimonial.photo"
-            alt="Testimonial Photo"
-            class="img-fluid testimonials-photo"
-          />
+          <img [src]="testimonial.photo" alt="Testimonial Photo" class="testimonials-photo" />
         </div>
       </div>
       <button class="emp-slider-arrow arrow-right" (click)="nextSlide()">&gt;</button>

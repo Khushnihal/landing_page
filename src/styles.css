@@ -635,30 +635,6 @@ textarea.bright-input {
   overflow: hidden;
 }
 
-.testimonials-slider-card {
-  background: #222f28;
-  border-radius: 20px;
-  box-shadow: 0 6px 28px 0 #0f3f0f99;
-  padding: 2rem 2rem 1.5rem 2rem;
-  width: 280px;
-  height: 240px;
-  opacity: 0.8;
-  z-index: 1;
-  transition: all 0.34s cubic-bezier(0.12, 1.42, 0.85, 0.98);
-  margin: 0 10px;
-  border: 1px solid #35733588;
-  color: #cde7d4;
-  filter: none;
-  transform: scale(0.9);
-  pointer-events: none;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
 /* Center card emphasized */
 .emp-slider-card.center {
   background: #184b19e6;
@@ -666,29 +642,48 @@ textarea.bright-input {
   opacity: 1;
   border: 2.5px solid #7afb03;
   z-index: 5;
-  transform: scale(1) translateY(-15px);
+  transform: scale(1.2) translateY(-15px);
   pointer-events: auto;
   filter: drop-shadow(0 4px 8px #7afb03aa);
   margin-top: 10%;
   margin-bottom: 10%;
 }
 
-.emp-slider-card.center:hover {
-  transform: scale(1.5) translateY(-20px);
-}
-
-/* Left and right cards smaller and subdued */
-.emp-slider-card.left,
-.emp-slider-card.right {
-  opacity: 0.7;
-  filter: blur(0.15px) grayscale(0.15);
-  transform: scale(0.85);
+/* left and right card emphasized */
+.emp-slider-card.right,
+.emp-slider-card.left {
+  color: #a9ff83;
+  opacity: 1;
+  border: 1px solid #35733588;
+  z-index: 5;
+  transform: scale(0.85) translateY(-15px);
+  pointer-events: auto;
+  filter: none;
   margin-top: 10%;
   margin-bottom: 10%;
 }
 
+/* Left and right cards smaller and subdued */
+/* .emp-slider-card.left,
+.emp-slider-card.right {
+  opacity: 0.7;
+  filter: blur(0.15px) grayscale(0.15);
+  transform: scale(1) translateY(-15px);
+  margin-top: 10%;
+  margin-bottom: 10%;
+} */
+
+.emp-slider-card.center:hover {
+  transform: scale(1.4) translateY(-20px);
+}
+
+.emp-slider-card.left:hover,
+.emp-slider-card.right:hover {
+  transform: scale(1) translateY(-20px);
+}
+
 /* Photo styling */
-.emp-photo {
+/* .emp-photo {
   border: 2px solid #3ecf85;
   border-radius: 15%;
   margin-bottom: 1rem;
@@ -696,22 +691,33 @@ textarea.bright-input {
   width: 120px;
   height: 120px;
   object-fit: cover;
-}
-
-/* .testimonials-photo {
-  border: 2px solid #3ecf85;
-  border-radius: 0%;
-  margin-bottom: 1rem;
-  display: block;
-  object-fit: cover;
-  width: 280px;
-  height: 241px;
 } */
 
+.emp-photo {
+  border: 2px solid #3ecf85;
+  border-radius: 15%;
+  margin-bottom: 1rem;
+  display: block;
+  width: 30vw; /* responsive */
+  max-width: 120px;
+  height: 30vw;
+  max-height: 120px;
+  object-fit: cover;
+}
+
 /* .emp-slider-card img, */
-.testimonials-photo {
+/* .testimonials-photo {
   width: 100%;
   max-width: 280px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+} */
+.testimonials-photo {
+  border: 2px solid #3ecf85;
+  border-radius: 7%;
+  width: 100%;
+  max-width: 80%; /* replaces 280px */
   height: auto;
   display: block;
   object-fit: contain;
