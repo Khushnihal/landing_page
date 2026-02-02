@@ -1,15 +1,38 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
+  imports: [FormsModule, CommonModule],
   templateUrl: './home.html',
   styleUrls: ['./home.css'],
 })
 export class Home implements AfterViewInit {
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+  ) {}
+
+  showSuccess = false;
+
+  onSubmit() {
+    // Later you can call API here
+
+    this.showSuccess = true;
+
+    // auto-close after 3 seconds (optional)
+    // setTimeout(() => {
+    //   this.showSuccess = false;
+    // }, 3000);
+  }
+
+  closePopup() {
+    this.showSuccess = false;
+  }
 
   ngAfterViewInit(): void {
     // Listen for route changes and scroll to fragment section

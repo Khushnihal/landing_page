@@ -81,6 +81,96 @@ body {
   transform: translateY(-2px);
 }
 
+/* =========================
+   Toast Notification CSS
+   ========================= */
+
+/* Toast container */
+.toast-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 16px;
+  z-index: 12000;
+}
+
+/* Toast box */
+.custom-toast {
+  cursor: default;
+  background: linear-gradient(145deg, #0f0f0f, #1b1b1b);
+  border-radius: 16px;
+  padding: 14px 18px;
+  color: #fff;
+  min-width: 320px;
+  margin-bottom: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  animation: toastSlideIn 0.4s ease;
+}
+
+/* Success & Error Borders */
+.toast-success {
+  border: 1px solid rgba(124, 255, 0, 0.4);
+}
+
+.toast-error {
+  border: 1px solid rgba(255, 80, 80, 0.4);
+}
+
+/* Icon */
+.custom-toast i {
+  font-size: 26px;
+  margin-top: 2px;
+}
+
+.toast-success i {
+  color: #7cff00;
+  text-shadow: 0 0 10px rgba(124, 255, 0, 0.8);
+}
+
+.toast-error i {
+  color: #ff5050;
+}
+
+/* Toast content */
+.toast-body {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+/* Progress bar controlled by Angular */
+.toast-progress {
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, #7cff00, #4cd400);
+  margin-top: 6px;
+  transition: width linear;
+}
+
+.toast-progress.paused {
+  transition: none;
+}
+
+.toast-error .toast-progress {
+  background: linear-gradient(90deg, #ff5050, #ff1a1a);
+}
+
+/* Animations */
+@keyframes toastSlideIn {
+  from {
+    transform: translateX(60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 /* Hero Section */
 .hero-section {
   background: linear-gradient(135deg, var(--dark-bg) 0%, #1a1a1a 100%);
@@ -430,6 +520,105 @@ body {
   margin-top: 0.5rem; /* reduce gap above button */
 }
 
+/* ===========  Contact (Pop-Up) Model ============== */
+/* ========= Premium Success Popup ========= */
+.success-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Popup Card */
+.success-popup {
+  background: linear-gradient(145deg, #111, #1a1a1a);
+  padding: 32px 28px;
+  border-radius: 22px;
+  text-align: center;
+  width: 92%;
+  max-width: 420px;
+  border: 1px solid rgba(0, 255, 0, 0.25);
+  box-shadow:
+    0 0 20px rgba(0, 255, 0, 0.25),
+    0 20px 60px rgba(0, 0, 0, 0.8);
+  animation: popupScale 0.35s ease;
+}
+
+/* Check Icon */
+/* .success-popup .icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background: rgba(0, 255, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  color: #7cff00;
+  box-shadow: 0 0 18px rgba(124, 255, 0, 0.6);
+} */
+.success-popup .icon {
+  width: 72px;
+  height: 62px;
+  margin: 0 auto 16px;
+  /* border-radius: 50%; */
+  background: rgba(124, 255, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  /* color: #7cff00; */
+  box-shadow: 0 0 20px rgba(124, 255, 0, 0.55);
+}
+
+/* Heading */
+.success-popup h4 {
+  color: #ffffff;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* Text */
+.success-popup p {
+  color: #b5b5b5;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Button */
+.success-popup .btn-success {
+  margin-top: 18px;
+  padding: 10px 32px;
+  border-radius: 30px;
+  font-weight: 500;
+  background: linear-gradient(90deg, #7cff00, #4cd400);
+  border: none;
+  color: #000;
+  box-shadow: 0 6px 18px rgba(124, 255, 0, 0.45);
+}
+
+.success-popup .btn-success:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(124, 255, 0, 0.65);
+}
+
+/* Animation */
+@keyframes popupScale {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 /* Bright Input Fields */
 .bright-input {
   background: #282222;
@@ -752,7 +941,9 @@ textarea.bright-input {
   height: 52px;
   cursor: pointer;
   box-shadow: 0 6px 16px #377c2644;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   user-select: none;
   display: flex;
   align-items: center;
