@@ -14,7 +14,7 @@ export class ItTraining implements OnInit {
   }
   testimonials = [
     {
-      photo: '/images/Khushnihal_updated_T.jpeg',
+      photo: '/images/Khushnihal_T.jpeg',
     },
     {
       photo: '/images/Vaishnavi_T.jpg',
