@@ -1,0 +1,15 @@
+.privacy-section {
+  background-color: #0b0f19; /* Dark theme matching typical modern layouts */
+}
+.privacy-section ul {
+  padding-left: 20px;
+}
+.privacy-section li {
+  margin-bottom: 8px;
+}
+.privacy-section a {
+  text-decoration: none;
+}
+.privacy-section a:hover {
+  text-decoration: underline;
+}
