@@ -30,9 +30,9 @@ export class OurTeam implements OnInit {
       photo: '/images/Divya.jpg',
     },
     {
-      name: 'Gaurav Khanorkar',
+      name: 'Kranti Tiwaskar',
       position: 'Admin/HR',
-      photo: '/images/Gaorav.jpg',
+      photo: '/images/Kranti.jpg',
     },
     {
       name: 'Tejas Telange',

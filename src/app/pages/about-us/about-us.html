@@ -1,0 +1,114 @@
+<section class="about-page py-5" style="min-height: 100vh; background: #000000">
+  <div class="container text-light py-1">
+    <!-- Hero / Intro -->
+    <div class="row align-items-center mb-5 pb-4">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <span class="badge text-uppercase mb-5 about-badge px-3 py-2 fw-semibold">
+          Who We Are
+        </span>
+        <h1 class="display-4 fw-bold text-white mb-3 mt-2">
+          Powering Your Brain<br />
+          <span class="text-brand">Digital Ladder</span>
+        </h1>
+        <p class="lead text-white mb-3">
+          RightLadder Technologies operates at the intersection of enterprise software engineering,
+          strategic IT consulting and professional technical education.
+        </p>
+        <p class="text-secondary mb-4">
+          We help organisations build robust, scalable digital systems—from custom platforms and
+          cloud-native applications to training programs that transform learners into job‑ready
+          engineers. Our in‑house products, including vertical solutions like EMR engines are
+          crafted using the same engineering discipline we bring to client projects.
+        </p>
+      </div>
+
+      <div class="col-lg-6 text-center position-relative hero-visual">
+        <div class="hero-glow-orb"></div>
+        <div class="hero-card d-inline-block">
+          <img
+            src="/images/LOGO-Light.png"
+            alt="RightLadder Technologies"
+            class="img-fluid style-logo"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Metrics -->
+    <div class="row row-cols-2 row-cols-md-4 g-4 my-5 py-4 metrics-strip">
+      @for (metric of metrics; track metric.label) {
+        <div class="col text-center">
+          <h2 class="display-5 fw-bold text-brand mb-1">{{ metric.value }}</h2>
+          <p class="small text-uppercase text-white tracking-wider mb-0">
+            {{ metric.label }}
+          </p>
+        </div>
+      }
+    </div>
+
+    <!-- Mission & Vision -->
+    <div class="row g-4 my-5">
+      <div class="col-md-6">
+        <div class="card h-100 about-card hover-lift">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="icon-box me-3">
+                <i class="bi bi-rocket-takeoff text-brand fs-4"></i>
+              </div>
+              <h3 class="h4 fw-bold text-white mb-0">Our Mission</h3>
+            </div>
+            <p class="text-white mb-0">
+              To remove engineering friction for growing businesses by delivering secure,
+              cloud‑ready software and clear technology roadmaps that move ideas to production
+              faster and with less risk.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card h-100 about-card hover-lift">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="icon-box me-3">
+                <i class="bi bi-eye text-brand fs-4"></i>
+              </div>
+              <h3 class="h4 fw-bold text-white mb-0">Our Vision</h3>
+            </div>
+            <p class="text-white mb-0">
+              To build RightLadder into a trusted engineering hub where enterprises source reliable
+              digital infrastructure and learners access real‑world, mentor‑driven training that
+              elevates their careers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Core Values -->
+    <div class="my-5 pt-5 text-center">
+      <span class="text-brand text-uppercase big-text fw-bold tracking-wider">
+        The Pillars of RightLadder
+      </span>
+      <h4 class="fw-bold text-white mt-2 mb-5">Our Operational Philosophy</h4>
+
+      <div class="row g-4 text-start">
+        @for (item of values; track item.title) 
+        {
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 about-card value-card hover-lift">
+              <div class="card-body p-4">
+                <div class="value-icon mb-3">
+                  <i class="bi {{ item.icon }} text-brand display-6"></i>
+                </div>
+                <h4 class="h5 fw-bold text-white mb-2">{{ item.title }}</h4>
+                <p class="text-white small mb-0">{{ item.desc }}</p>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -1030,54 +1030,142 @@ textarea.bright-input {
     text-align: center;
   }
 
-  /* Font adjustments in smaller viewports */
-  .section-title,
-  .owner-name {
-    font-size: 1.5rem;
-  }
-  .emp-name {
-    font-size: 1rem;
-  }
-  .glass-row {
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-  }
-  .owner-section {
-    padding: 1.5rem;
-  }
-
-  /* Footer mobile adjustments */
-  .footer {
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-  .footer-text {
-    font-size: 0.9rem;
-  }
-  .footer-link {
-    display: inline-block;
-    margin: 0 0.5rem 0.5rem 0.5rem;
-  }
-  .d-flex.align-items-start {
-    flex-direction: column;
-    align-items: center;
-  }
-  .me-4 {
-    margin-right: 0 !important;
-    margin-bottom: 1rem;
-  }
 }
 
-/* Use Bootstrap's img-fluid behavior for images */
-.emp-photo.img-fluid {
-  max-width: 60%;
-  height: auto;
+/* ========== Floating contact buttons — refined ========== */
+.floating-contact {
+position: fixed;
+right: 22px;
+bottom: 22px;
+display: flex;
+flex-direction: column;
+gap: 12px;
+z-index: 14000;
+pointer-events: none;
 }
-.testimonials-photo.img-fluid {
-  max-width: 100%;
-  height: auto;
+
+/* allow clicks on the anchor children */
+.floating-contact .floating-btn {
+pointer-events: auto;
+position: relative; /* needed for pseudo elements */
+display: inline-flex;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+color: #fff;
+transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+-webkit-tap-highlight-color: transparent;
 }
-.owner-photo.img-fluid {
-  max-width: 100%;
-  height: auto;
+
+/* WhatsApp (large green disc) */
+.whatsapp-btn {
+width: 60px;
+height: 60px;
+border-radius: 50%;
+background: radial-gradient(circle at 35% 30%, #7bff55 0%, #29da4a 45%, #0aa724 100%);
+border: 1px solid rgba(255,255,255,0.06);
+box-shadow:
+0 8px 22px rgba(34,139,34,0.28),
+0 0 48px rgba(123,255,85,0.20),
+inset 0 6px 18px rgba(255,255,255,0.05);
+font-size: 20px;
+line-height: 1;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+}
+
+/* bigger glowy halo behind WhatsApp (subtle) */
+.whatsapp-btn::after {
+content: '';
+position: absolute;
+width: 75px;
+height: 75px;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+border-radius: 50%;
+background: radial-gradient(circle at 50% 45%, rgba(123,255,85,0.18) 0%, transparent 45%);
+filter: blur(12px);
+z-index: -2;
+pointer-events: none;
+}
+
+/* inner white icon background to keep icon perfectly centered/visible */
+.whatsapp-btn .bi {
+color: #fff;
+font-size: 36px;
+filter: drop-shadow(0 2px 4px rgba(0,0,0,0.35));
+}
+
+/* Phone (smaller dark disc with thin ring) */
+.phone-btn {
+width: 60px;
+height: 60px;
+border-radius: 50%;
+background: rgba(10,10,10,0.92);
+border: 1px solid rgba(255,255,255,0.06);
+border-color: #ffffff;
+box-shadow: 0 8px 20px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+font-size: 20px;
+color: #fff;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+}
+
+/* subtle white ring behind phone */
+.phone-btn::before {
+content: '';
+position: absolute;
+width: 75px;
+height: 75px;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+border-radius: 50%;
+border: 2px solid rgba(255,255,255,0.06);
+filter: blur(4px);
+z-index: -2;
+pointer-events: none;
+}
+
+/* ensure icons are centered and the same vertical baseline */
+.floating-btn i {
+display: block;
+line-height: 1;
+width: 1em;
+height: 1em;
+text-align: center;
+}
+
+/* hover/focus */
+.floating-btn:hover,
+.floating-btn:focus {
+transform: translateY(-6px) scale(1.02);
+opacity: 0.98;
+
+}
+
+/* WhatsApp stronger hover glow */
+.whatsapp-btn:hover {
+box-shadow:
+0 14px 36px rgba(34,139,34,0.35),
+0 0 80px rgba(123,255,85,0.26),
+inset 0 10px 30px rgba(255,255,255,0.06);
+}
+
+/* phone hover subtle */
+.phone-btn:hover {
+box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+border-color: #ffffff;
+}
+
+/* Mobile: scale both down and remove heavy halo */
+@media (max-width: 767.98px) {
+.floating-contact { right: 14px; bottom: 14px; gap: 10px; }
+.whatsapp-btn { width: 68px; height: 68px; font-size: 28px; }
+.whatsapp-btn::after { display: none; }
+.phone-btn { width: 48px; height: 48px; font-size: 18px; }
+.phone-btn::before { display: none; }
 }

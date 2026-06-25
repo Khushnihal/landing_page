@@ -1,0 +1,154 @@
+/* Page background to match privacy policy */
+.about-page {
+  background-color: #000000;
+}
+
+/* Brand neon green */
+.text-brand {
+  color: #7afb03 !important;
+}
+
+.big-text {
+  font-size: 30px;
+}
+
+.text-secondary {
+  color: #a1fd65 !important;
+}
+/* "Who We Are" badge */
+.about-badge {
+  border-radius: 50px;
+  border: 2px solid #7afb03;
+  background: rgba(0, 0, 0, 0.9);
+  color: #7afb03;
+  letter-spacing: 0.14em;        /* more spacing */
+  font-size: 1.2rem;             /* increase if you want */
+  text-shadow: 0 0 8px rgba(122, 251, 3, 0.6);
+}
+
+
+/* Logo card similar glow feel */
+.hero-card {
+  padding: 1.5rem 2rem;
+  border-radius: 1.25rem;
+  background: rgba(0, 0, 0, 0.95);
+  border: 1px solid rgba(122, 251, 3, 0.35);
+  box-shadow: 0 10px 30px rgba(73, 73, 73, 0.9);
+  position: relative;
+  z-index: 1;
+}
+
+.style-logo {
+  max-width: 320px;
+  width: 100%;
+}
+
+/* Heading size control for "The Pillars of RightLadder" */
+.big {
+  font-size: 1rem;         /* adjust this value anytime */
+}
+
+/* If you ever want an even larger option */
+.big-xl {
+  font-size: 1.2rem;
+}
+
+/* Ambient orb behind logo */
+.hero-glow-orb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(122, 251, 3, 0.16) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Metrics strip – aligned with privacy card style */
+.metrics-strip {
+  background: rgba(0, 0, 0, 0.95);
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px rgba(53, 54, 55, 0.8);
+  border: 1px solid rgba(34, 253, 38, 0.35);
+}
+
+/* Letter spacing helper */
+.tracking-wider {
+  letter-spacing: 0.1rem;
+}
+
+/* Generic cards matching privacy look */
+.about-card {
+  background: rgba(0, 0, 0, 0.95);
+  border-radius: 0.9rem;
+  border: 1px solid rgba(34, 253, 38, 0.25);
+  box-shadow: 0 8px 26px rgba(57, 58, 59, 0.85);
+}
+
+/* Icon box (mission/vision) */
+.icon-box {
+  width: 52px;
+  height: 52px;
+  background: rgba(0, 0, 0, 0.95);
+  border-radius: 1rem;
+  border: 1px solid rgba(34, 253, 38, 0.4);
+  box-shadow: 0 6px 18px rgba(49, 49, 50, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Value card accent */
+.value-card {
+  border-left: 3px solid #7afb03;
+}
+
+/* Value icon container */
+.value-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background-color: rgba(22, 163, 74, 0.08);
+  border: 1px solid rgba(22, 237, 22, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover animation similar to privacy hover-card */
+.hover-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.95);
+  border-color: rgba(122, 251, 3, 0.6);
+}
+
+/* Responsive tweaks */
+.hero-visual {
+  margin-top: 1rem;
+}
+
+@media (max-width: 767.98px) {
+  .about-page {
+    padding-top: 3rem !important;
+  }
+
+  .display-4 {
+    font-size: 2.2rem;
+  }
+
+  .metrics-strip {
+    margin-top: 2rem !important;
+    margin-bottom: 2.5rem !important;
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  .hero-card {
+    padding: 1.25rem 1.5rem;
+  }
+}

@@ -1,0 +1,152 @@
+<section
+  class="careers-page py-5"
+  style="margin-top: 1px; min-height: 100vh; background: #000000"
+>
+  <div class="container text-light py-1">
+    <!-- Hero -->
+    <div class="row align-items-center hero-careers-row">
+  <div class="col-lg-7 mb-4 mb-lg-0 careers-text-col">
+    <span class="badge text-uppercase careers-badge px-3 py-2 fw-semibold">
+      Careers · Join Our Team
+    </span>
+
+    <h1 class="display-4 fw-bold text-white mb-3">
+      Build Your<br />
+      <span class="text-brand">Career with RightLadder</span>
+    </h1>
+
+    <p class="lead text-white mb-3">
+      Work on real-world projects, learn from experienced mentors, and grow your skills in
+      modern web, data and cloud technologies.
+    </p>
+
+    <p class="text-secondary mb-6">
+      At RightLadder Technologies, we combine hands-on project delivery with in-depth
+      technical training. You don’t just “do tasks” — you architect solutions, ship code
+      that matters, and continuously upskill alongside our team.
+    </p>
+
+    <a href="#openings" class="btn btn-success px-4 py-2 mt-4">
+      View Open Positions
+    </a>
+  </div>
+
+  <div class="col-lg-5 text-center position-relative careers-visual">
+    <div class="careers-image-bg"></div>
+    <div class="careers-overlay-content">
+    </div>
+  </div>
+</div>
+
+    <!-- Why Work With Us -->
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="card h-100 careers-card highlight-card hover-lift">
+          <div class="card-body p-4">
+            <div class="icon-box me-3 mb-3">
+              <i class="bi bi-lightning-charge text-brand fs-4"></i>
+            </div>
+            <h3 class="h5 fw-bold text-white mb-2">Real Projects, Real Impact</h3>
+            <p class="text-white small mb-0">
+              Work on production-grade software for clients and in-house products — not just demo
+              apps. See your work deployed and used.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 careers-card highlight-card hover-lift">
+          <div class="card-body p-4">
+            <div class="icon-box me-3 mb-3">
+              <i class="bi bi-mortarboard text-brand fs-4"></i>
+            </div>
+            <h3 class="h5 fw-bold text-white mb-2">Mentor-Led Learning</h3>
+            <p class="text-white small mb-0">
+              Learn directly from senior engineers and trainers. We pair you with mentors and give
+              you structured learning paths.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 careers-card highlight-card hover-lift">
+          <div class="card-body p-4">
+            <div class="icon-box me-3 mb-3">
+              <i class="bi bi-people text-brand fs-4"></i>
+            </div>
+            <h3 class="h5 fw-bold text-white mb-2">Collaborative Culture</h3>
+            <p class="text-white small mb-0">
+              We keep teams small and collaborative, so you always know the “why” behind the work
+              and have a say in decisions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Open Positions -->
+    <div id="openings" class="mb-5 pt-4 text-center">
+      <span class="text-brand text-uppercase big-text fw-bold tracking-wider">
+        Current Openings
+      </span>
+      <h4 class="fw-bold text-white mt-2 mb-4">Find Your Next Role</h4>
+      <p class="text-secondary mb-5">
+        Explore the roles below. If you don’t see an exact match, you can still send us your
+        profile — we are always open to strong talent.
+      </p>
+
+      <div class="row g-4 text-start">
+        @for (job of openings; track job.title) {
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 careers-card job-card hover-lift">
+              <div class="card-body p-4 d-flex flex-column">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <h3 class="h5 fw-bold text-white mb-0">{{ job.title }}</h3>
+                  <span class="badge job-type">{{ job.type }}</span>
+                </div>
+                <p class="text-brand small mb-1">{{ job.location }}</p>
+                <p class="text-white-50 small mb-3">Experience: {{ job.level }}</p>
+                <p class="text-white small mb-3 flex-grow-1">
+                  {{ job.highlight }}
+                </p>
+                <div class="mb-3">
+                  @for (tag of job.tags; track tag) {
+                    <span class="badge skill-badge me-1 mb-1">{{ tag }}</span>
+                  }
+                </div>
+                <a href="mailto:info@rightladder.in?subject=Application: {{ job.title }}"
+                   class="btn btn-success w-100 py-2 mt-2">
+                  Apply via Email
+                </a>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- General Application CTA -->
+    <div class="mt-5 pt-4">
+      <div class="card careers-card p-4 p-md-5 hover-lift">
+        <div class="row align-items-center">
+          <div class="col-md-8 mb-3 mb-md-0">
+            <h3 class="h4 fw-bold text-white mb-2">Don’t see a perfect match?</h3>
+            <p class="text-secondary mb-0">
+              If you are passionate about building software, mentoring others, or working on data
+              and cloud projects, send us your resume and a short note about what you want to work on.
+            </p>
+          </div>
+          <div class="col-md-4 text-md-end text-start">
+            <a href="mailto:info@rightladder.in?subject=General%20Application"
+               class="btn btn-outline-success px-4 py-2">
+              Share Your Profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
