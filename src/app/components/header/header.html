@@ -21,27 +21,27 @@
     </button>
 
     <!-- Collapsible navbar content -->
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse" id="navbarNav" #navbarCollapse>
       <ul class="navbar-nav mx-auto">
-        <li class="nav-item"><a [routerLink]="['/']" fragment="home" class="nav-link">Home</a></li>
+        <li class="nav-item"><a [routerLink]="['/']" fragment="home" class="nav-link" (click)="closeMobileMenu()">Home</a></li>
         <li class="nav-item">
-          <a [routerLink]="['/about']" class="nav-link">About Us</a>
+          <a [routerLink]="['/about']" class="nav-link" (click)="closeMobileMenu()">About Us</a>
         </li>
         <li class="nav-item">
-          <a [routerLink]="['/']" fragment="services" class="nav-link">Services</a>
+          <a [routerLink]="['/']" fragment="services" class="nav-link" (click)="closeMobileMenu()">Services</a>
         </li>
         <li class="nav-item">
-          <a [routerLink]="['/']" fragment="products" class="nav-link">Products</a>
+          <a [routerLink]="['/']" fragment="products" class="nav-link" (click)="closeMobileMenu()">Products</a>
         </li>
         <li class="nav-item">
-          <a [routerLink]="['it-training']" class="nav-link">IT Trainings</a>
+          <a [routerLink]="['it-training']" class="nav-link" (click)="closeMobileMenu()">IT Trainings</a>
         </li>
         <li class="nav-item">
-          <a [routerLink]="['/careers']" class="nav-link">Careers</a>
+          <a [routerLink]="['/careers']" class="nav-link" (click)="closeMobileMenu()">Careers</a>
         </li>
-        <li class="nav-item"><a [routerLink]="['our-team']" class="nav-link">Our Team</a></li>
+        <li class="nav-item"><a [routerLink]="['/our-team']" class="nav-link" (click)="closeMobileMenu()">Our Team</a></li>
         <li class="nav-item">
-          <a [routerLink]="['/']" fragment="contact" class="nav-link">Contact</a>
+          <a [routerLink]="['/']" fragment="contact" class="nav-link" (click)="closeMobileMenu()">Contact</a>
         </li>
       </ul>
       <div class="d-flex gap-2">

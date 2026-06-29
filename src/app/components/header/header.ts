@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule, NgFor, NgClass } from '@angular/common';
 import {
@@ -20,14 +20,12 @@ import {
   styleUrls: ['./header.css'],
 })
 export class Header {
-  // Reactive Form
-  registerForm: FormGroup;
+  @ViewChild('navbarCollapse') navbarCollapse!: ElementRef<HTMLElement>;
 
-  // Toasts
+  registerForm: FormGroup;
   toasts: any[] = [];
 
   constructor() {
-    // Password match validator
     const passwordMatchValidator: ValidatorFn = (
       control: AbstractControl,
     ): ValidationErrors | null => {
@@ -36,7 +34,6 @@ export class Header {
       return password && confirm && password !== confirm ? { passwordMismatch: true } : null;
     };
 
-    // Form group
     this.registerForm = new FormGroup(
       {
         fullName: new FormControl('', [Validators.required, Validators.minLength(3)]),
@@ -50,7 +47,42 @@ export class Header {
     );
   }
 
-  // REGISTER
+  closeMobileMenu(): void {
+    if (window.innerWidth >= 992) return;
+
+    const el = this.navbarCollapse?.nativeElement;
+    if (!el) return;
+
+    const collapseInstance = (window as any).bootstrap?.Collapse.getInstance(el);
+    if (collapseInstance) {
+      collapseInstance.hide();
+    } else {
+      const newInstance = new (window as any).bootstrap.Collapse(el, {
+        toggle: false,
+      });
+      newInstance.hide();
+    }
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent): void {
+    if (window.innerWidth >= 992) return;
+
+    const el = this.navbarCollapse?.nativeElement;
+    if (!el) return;
+
+    const target = event.target as HTMLElement;
+    const clickedInsideNavbar =
+      target.closest('.navbar') !== null || target.closest('.modal') !== null;
+
+    if (!clickedInsideNavbar) {
+      const collapseInstance = (window as any).bootstrap?.Collapse.getInstance(el);
+      if (collapseInstance) {
+        collapseInstance.hide();
+      }
+    }
+  }
+
   onRegister() {
     if (this.registerForm.invalid) {
       this.registerForm.markAllAsTouched();
@@ -63,7 +95,7 @@ export class Header {
       type: 'success',
       timeoutId: null as any,
       paused: false,
-      remaining: 5000, // 5 seconds
+      remaining: 5000,
       startTime: Date.now(),
       progressWidth: 100,
     };
@@ -71,7 +103,6 @@ export class Header {
     this.toasts.push(toast);
     this.startToastTimer(toast);
 
-    // Close modal
     const modalEl = document.getElementById('registerModal');
     if (modalEl) {
       const modal =
@@ -80,11 +111,9 @@ export class Header {
       modal.hide();
     }
 
-    // Reset form after modal closes
     setTimeout(() => this.resetRegisterForm(), 200);
   }
 
-  // Toast timer with pause-on-hover support
   startToastTimer(toast: any) {
     toast.startTime = Date.now();
 
@@ -126,7 +155,6 @@ export class Header {
 
   resetRegisterForm() {
     this.registerForm.reset();
-    // Clear any autofill background
     const inputs = document.querySelectorAll<HTMLInputElement>('#registerModal input');
     inputs.forEach((input) => (input.style.backgroundColor = ''));
   }

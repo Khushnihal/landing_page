@@ -1,0 +1,303 @@
+#internship-training-page {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+#internship-training-page .section-title {
+  font-size: clamp(1.55rem, 4vw, 2.7rem);
+  line-height: 1.2;
+  margin-bottom: 1.5rem !important;
+}
+
+#internship-training-page .glass-row {
+  background: var(--dark-bg);
+  border-radius: 24px;
+  padding: 1.6rem 1.2rem 1.2rem 1.2rem;
+  box-shadow: 0 0 15px var(--glow-RL);
+  margin-bottom: 2rem !important;
+  backdrop-filter: blur(14px) brightness(1.2);
+}
+
+#internship-training-page .glass-item {
+  background: var(--dark-bg);
+  border: 1px solid var(--border-green);
+  border-radius: 16px;
+  padding: 1.35rem;
+  transition: all 0.3s ease;
+  height: 100%;
+  text-align: center;
+}
+
+#internship-training-page .glass-icon {
+  font-size: clamp(2rem, 5vw, 2.7rem);
+  color: var(--primary-green);
+  margin-bottom: 1rem;
+  text-shadow: 0 0 20px var(--glow-green);
+}
+
+#internship-training-page .glass-label {
+  font-weight: 800;
+  font-size: clamp(1.08rem, 2.6vw, 1.35rem);
+  color: #e3ede2;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+#internship-training-page .glass-desc {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: #fefffd;
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+#internship-training-page .emp-slider-section .section-title {
+  color: #fff;
+}
+
+#internship-training-page .emp-slider-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 980px;
+  margin: auto;
+  position: relative;
+  padding: 1rem 0;
+  background-color: #121818;
+  border-radius: 15px;
+  box-shadow: 0 0 12px #0b2a13cc;
+}
+
+#internship-training-page .emp-slider {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 270px;
+  justify-content: center;
+  align-items: center;
+}
+
+#internship-training-page .emp-slider-card {
+   background: #222f28;
+  border-radius: 20px;
+  box-shadow: 0 6px 28px 0 #0f3f0f99;
+  padding: 1rem;
+  width: 280px;
+  aspect-ratio: 1 / 1.05;
+  height: auto;
+  opacity: 0.8;
+  z-index: 1;
+  transition: all 0.34s cubic-bezier(0.12, 1.42, 0.85, 0.98);
+  margin: 0 10px;
+  border: 1px solid #35733588;
+  color: #cde7d4;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#internship-training-page .emp-slider-card.center {
+  background: #184b19e6;
+  color: #a9ff83;
+  opacity: 1;
+  border: 2.5px solid #7afb03;
+  z-index: 5;
+  transform: scale(1.08) translateY(-8px);
+  pointer-events: auto;
+  filter: drop-shadow(0 4px 8px #7afb03aa);
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+
+#internship-training-page .emp-slider-card.left,
+#internship-training-page .emp-slider-card.right {
+  color: #a9ff83;
+  opacity: 1;
+  border: 1px solid #35733588;
+  z-index: 5;
+  transform: scale(0.96) translateY(-8px);
+  pointer-events: auto;
+  filter: none;
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+
+#internship-training-page .testimonials-photo {
+  border: 2px solid #3ecf85;
+  border-radius: 7%;
+  width: 88%;
+  max-width: 88%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+
+
+@media (max-width: 991.98px) {
+  #internship-training-page {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  #internship-training-page .section-title {
+    font-size: 1.8rem;
+  }
+
+  #internship-training-page .glass-label {
+    font-size: 1.15rem;
+  }
+
+  #internship-training-page .glass-row {
+    padding: 1.4rem 1rem 1rem 1rem;
+  }
+
+  #internship-training-page .glass-item {
+    padding: 1.25rem;
+  }
+
+  #internship-training-page .glass-desc {
+    font-size: 0.94rem;
+  }
+
+  #internship-training-page .emp-slider-wrapper {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  #internship-training-page .emp-slider {
+    min-height: 240px;
+  }
+
+  #internship-training-page .emp-slider-card {
+    width: 240px;
+    padding: 0.9rem;
+  }
+
+  #internship-training-page .emp-slider-card.center {
+    transform: scale(1.04) translateY(-6px);
+  }
+
+  #internship-training-page .emp-slider-card.left,
+  #internship-training-page .emp-slider-card.right {
+    transform: scale(0.93) translateY(-6px);
+  }
+
+  #internship-training-page .emp-slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #163020cc;
+  color: #7afb03;
+  font-size: 2rem;
+  border: none;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px #377c2644;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#internship-training-page .arrow-left {
+  left: -55px;
+}
+
+#internship-training-page .arrow-right {
+  right: -55px;
+}
+
+  #internship-training-page .testimonials-photo {
+    width: 92%;
+    max-width: 92%;
+  }
+
+}
+
+@media (max-width: 767.98px) {
+  #internship-training-page {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  #internship-training-page .section-title {
+    font-size: 1.55rem;
+    margin-bottom: 1.25rem !important;
+  }
+
+  #internship-training-page .glass-row {
+    padding: 1.1rem 0.9rem 0.9rem 0.9rem;
+    margin-bottom: 1.5rem !important;
+  }
+
+  #internship-training-page .glass-item {
+    padding: 1rem;
+  }
+
+  #internship-training-page .glass-label {
+    font-size: 1.08rem;
+  }
+
+  #internship-training-page .glass-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  #internship-training-page .emp-slider-wrapper {
+    padding: 0.75rem;
+    gap: 0.5rem;
+  }
+
+  #internship-training-page .emp-slider {
+    min-height: 220px;
+  }
+
+  #internship-training-page .emp-slider-card {
+    width: 78vw;
+    max-width: 280px;
+    padding: 0.8rem;
+    margin: 0 6px;
+  }
+
+  #internship-training-page .emp-slider-card.center {
+    transform: scale(1.02) translateY(-4px);
+  }
+
+  #internship-training-page .emp-slider-card.left,
+  #internship-training-page .emp-slider-card.right {
+    transform: scale(0.92) translateY(-4px);
+  }
+
+  #internship-training-page .emp-slider-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 1.4rem;
+  }
+
+  #internship-training-page .arrow-left {
+    left: -8px;
+  }
+
+  #internship-training-page .arrow-right {
+    right: -8px;
+  }
+
+  #internship-training-page .testimonials-photo {
+    width: 95%;
+    max-width: 95%;
+  }
+
+  #internship-training-page .emp-photo {
+    width: 80px;
+    height: 80px;
+  }
+}

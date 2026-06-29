@@ -1161,11 +1161,23 @@ box-shadow: 0 12px 30px rgba(0,0,0,0.6);
 border-color: #ffffff;
 }
 
-/* Mobile: scale both down and remove heavy halo */
-@media (max-width: 767.98px) {
-.floating-contact { right: 14px; bottom: 14px; gap: 10px; }
-.whatsapp-btn { width: 68px; height: 68px; font-size: 28px; }
-.whatsapp-btn::after { display: none; }
-.phone-btn { width: 48px; height: 48px; font-size: 18px; }
-.phone-btn::before { display: none; }
+/* Mobile + Tablet: equal button sizing */
+@media (max-width: 991.98px) {
+  .floating-contact {
+    right: 14px;
+    bottom: 14px;
+    gap: 10px;
+  }
+
+  .whatsapp-btn,
+  .phone-btn {
+    width: 68px;
+    height: 68px;
+    font-size: 28px;
+  }
+
+  .whatsapp-btn::after,
+  .phone-btn::before {
+    display: none;
+  }
 }
